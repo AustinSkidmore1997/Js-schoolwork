@@ -1,17 +1,22 @@
+
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const firstName = [Owen,Austin,Cole,Mark]
 const lastName = [Wilson,Giles,Luck,Nagal]
+const button = document.querySelector('Enter first name');
 // Collect employee data
-const collectEmployees = function() {
- 
- 
-    let n = 0
-  let x = 0
+const collectEmployees = function(employeesArray) {
+   
+    let firstName = 0
+  let lastName = 0
   while (n < 3) {
     n++;
     x += n;
   }
+  if (isNaN(x)) {
+    return 'Not a Number!';
+  }
+  return x * 1000;
 }
 
 // Display the average salary
@@ -89,4 +94,4 @@ const trackEmployeeData = function() {
 }
 
 // Add event listener to 'Add Employees' button
-addEmployeesBtn.addEventListener('click', trackEmployeeData);
+addEmployeesBtn.addEventListener('click', trackEmployeeData); 
